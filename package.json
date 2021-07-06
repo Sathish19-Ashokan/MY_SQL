@@ -14,5 +14,11 @@
     "express-validator": "^6.12.0",
     "mysql2": "^2.2.5",
     "nodemon": "^2.0.9"
+  },
+  "devDependencies": {
+    "eslint": "^7.30.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-html": "^6.1.2",
+    "eslint-plugin-import": "^2.23.4"
   }
 }
