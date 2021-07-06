@@ -1,0 +1,19 @@
+{
+    "env": {
+        "browser": true,
+        "es2021": true
+    },
+    "extends": [
+        "airbnb-base"
+    ],
+    "plugins": ["html"],
+    "settings": {
+      "html/html-extensions": [".html", ".ejs"] // consider .html and .ejs files as HTML
+    },
+    "parserOptions": {
+        "ecmaVersion": 12,
+        "sourceType": "module"
+    },
+    "rules": {
+    }
+}
