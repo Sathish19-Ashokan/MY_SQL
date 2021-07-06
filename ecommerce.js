@@ -8,13 +8,13 @@ const connection = mysql.createConnection({
     user: 'sathish',
     password:'Sathish@19',
     database: 'ecommerce'
-  });
+});
 
 connection.connect((err) => {
     if(err){
         throw err;
     }
-    console.log('mysql is connected....')
+    console.log('mysql is connected....');
 })
 
 const app = express();
@@ -32,7 +32,7 @@ app.post('/', [
     .isEmail()
     .normalizeEmail(),
  
-],(req,res) => {
+  ],(req,res) => {
   const errors = validationResult(req);
     if(!errors.isEmpty()){
       const alert = errors.array();
@@ -62,8 +62,8 @@ app.post('/', [
               res.render('validation', { count });
             }
         }
-      );
-  });
+  );
+});
 
 app.get('/', (req,res) => {
   res.sendFile(`${__dirname}/loginOrSignup.html`);
