@@ -1,0 +1,25 @@
+<%- include('partials/head.ejs') %>
+<title>Validation</title>
+</head>
+
+<body>
+    <h1>Form Validation</h1>
+    <% if(count > 0) {%>
+        <div class="form-group p-3 mb-2 bg-danger text-white">
+            <h2>Email Already Exist</h2>
+        </div>
+        <form action="/signup" method="GET">
+            <button type="submit" class="btn btn-primary btn-sm">Go to SignUp Page</button>
+        </form>
+    <% } %>
+    <% if(count === 0) {%>
+        <div class="form-group p-3 mb-2 bg-success text-white">
+            <h2>Registration Successful</h2>
+        </div>
+        <form action="/login" method="GET">
+            <button type="submit" class="btn btn-primary btn-sm">Go to LogIn Page</button>
+        </form>
+    <% } %>
+</body>
+
+</html>
