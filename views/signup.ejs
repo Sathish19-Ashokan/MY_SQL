@@ -1,16 +1,4 @@
 <%- include('partials/head.ejs') %>
-<title>SignUp</title>
-<style>
-  .form-group {
-    padding: 20px;
-  }
-
-  label {
-    font-weight: bold;
-  }
-</style>
-</head>
-
 <body>
   <h1 class="form-group">SignUp here!</h1>
 
@@ -30,7 +18,7 @@
   <% } %>
 
 
-  <form style="max-width: 30%;" action="/" method="POST">
+  <form style="max-width: 30%;" action="/auth/register" method="POST">
     <div class="form-group">
       <label for="exampleInputEmail1">Email address</label>
       <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email" name="email">
@@ -50,4 +38,4 @@
   </form>
 </body>
 
-</html>
+<%- include('partials/footer.ejs') %>
