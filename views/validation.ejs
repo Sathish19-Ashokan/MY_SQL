@@ -1,0 +1,15 @@
+<%- include('partials/head.ejs') %>
+
+<body>
+    <h1>Form Validation</h1>
+    <% if(count === 0) {%>
+        <div class="form-group p-3 mb-2 bg-success text-white">
+            <h2><%= message %></h2>
+        </div>
+        <form action="/login" method="GET">
+            <button type="submit" class="btn btn-primary btn-sm">Go to LogIn Page</button>
+        </form>
+    <% } %>
+</body>
+
+<%- include('partials/footer.ejs') %>
