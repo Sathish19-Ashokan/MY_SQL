@@ -2,9 +2,9 @@ const express = require('express');
 
 const router = express.Router();
 
-router.get('/', (req, res) => {
-  res.render('loginOrSignup', { title: 'Login or Signup' });
-});
+const authController = require('../controllers/auth');
+
+router.get('/', authController.start);
 
 router.get('/login', (req, res) => {
   res.render('login', { count: 0, message: '', title: 'Login' });
@@ -13,5 +13,9 @@ router.get('/login', (req, res) => {
 router.get('/signup', (req, res) => {
   res.render('signup', { alerts: 'hh', title: 'Signup' });
 });
+
+router.get('/home', authController.home);
+
+router.get('/logout', authController.logout);
 
 module.exports = router;

@@ -18,4 +18,6 @@ router.post('/register', [
 
 router.post('/user', authController.login);
 
+router.post('/home', authController.home);
+
 module.exports = router;

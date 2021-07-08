@@ -16,7 +16,16 @@ connection.connect((err) => {
   console.log('mysql is connected....');
 });
 
+let session = require('express-session');
+
 const app = express();
+
+app.use(session({
+  secret: 'secret cat',
+  resave: false,
+  saveUninitialized: false,
+  cookie: { maxAge: 24 * 60 * 60 * 1000 },
+}));
 app.use(express.static('public'));
 
 app.set('view engine', 'ejs');
